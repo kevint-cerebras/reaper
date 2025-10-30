@@ -20,7 +20,7 @@ log_section() { echo ""; log "========== $* =========="; }
 WORKSPACE="/workspace"
 COMPRESSIONS="0.5 0.7 0.9 0.95 0.98"  # 50%, 30%, 10%, 5%, 2% remaining
 MODEL="Qwen/Qwen3-Next-80B-A3B-Instruct"
-DATASET="nickrosh/Evol-Instruct-Code-80k-v1"
+DATASET="theblackcat102/evol-codealpaca-v1"
 NUM_SAMPLES=1024
 MAX_LENGTH=1024  # REDUCED from 2048 to save memory
 SEED=42
