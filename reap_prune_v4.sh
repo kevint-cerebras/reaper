@@ -69,7 +69,7 @@ if [ ! -d ".venv" ]; then
     uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124 >> "$LOG_FILE" 2>&1
     
     log "Installing transformers & dependencies..."
-    uv pip install transformers==4.55.0 accelerate datasets >> "$LOG_FILE" 2>&1
+    uv pip install transformers==4.55.0 accelerate datasets pyyaml >> "$LOG_FILE" 2>&1
     
     log "Installing REAP package..."
     uv pip install -e . >> "$LOG_FILE" 2>&1
