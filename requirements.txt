@@ -1,0 +1,40 @@
+# REAP - MoE Compression Dependencies
+# For Qwen3-Next-80B-A3B-Instruct Pruning
+
+# Core ML frameworks
+torch==2.7.1
+transformers==4.55.0
+accelerate>=1.7.0
+
+# Data processing
+datasets>=3.6.0,<4.0.0
+
+# Model serving and evaluation
+vllm==0.10.0
+lm-eval[vllm,api]>=0.4.9.1
+evalplus[vllm]>=0.3.1
+
+# Training and fine-tuning
+deepspeed>=0.17.4
+trl>=0.21.0
+
+# Visualization and analysis
+matplotlib>=3.10.3
+seaborn>=0.13.2
+umap-learn>=0.5.7
+
+# Utilities
+python-dotenv>=1.1.0
+wandb>=0.21.1
+jupyter>=1.1.1
+hatchling>=1.27.0
+
+# Benchmark suites (third-party)
+# Note: Some dependencies are installed from ./third-party/ submodules
+# livecodebench - from third-party/LiveCodeBench
+# crfm-helm - from third-party/helm
+# evalscope - from third-party/evalscope
+
+# Optional: Uncomment if needed for specific architectures
+# flash-attn>=2.7.1,<=2.8.0  # For Llama4/xformers (manual install: pip install flash-attn --no-build-isolation)
+
