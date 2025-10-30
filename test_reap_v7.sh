@@ -28,6 +28,14 @@ cd reaper
 # Add to PYTHONPATH so imports work
 export PYTHONPATH="${WORKSPACE}/reaper/src:$PYTHONPATH"
 
+echo "→ Pre-downloading test model (~5GB)..."
+python << 'EOF'
+from huggingface_hub import snapshot_download
+import os
+snapshot_download("Qwen/Qwen1.5-MoE-A2.7B", cache_dir=os.environ.get("HF_HOME"), ignore_patterns=["*.msgpack", "*.h5"])
+print("✓ Model downloaded")
+EOF
+
 echo "→ Configuring Qwen3-Next..."
 python << 'EOF'
 with open('src/reap/model_util.py', 'r') as f:
