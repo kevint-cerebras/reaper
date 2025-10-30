@@ -42,6 +42,9 @@ fi
 
 cd "$REAP_DIR"
 
+# Add to PYTHONPATH so imports work
+export PYTHONPATH="${WORKSPACE}/reaper/src:$PYTHONPATH"
+
 log "Configuring Qwen3-Next..."
 python << 'EOF' >> "$LOG_FILE" 2>&1
 with open('src/reap/model_util.py', 'r') as f:

@@ -25,6 +25,9 @@ fi
 
 cd reaper
 
+# Add to PYTHONPATH so imports work
+export PYTHONPATH="${WORKSPACE}/reaper/src:$PYTHONPATH"
+
 echo "→ Configuring Qwen3-Next..."
 python << 'EOF'
 with open('src/reap/model_util.py', 'r') as f:
