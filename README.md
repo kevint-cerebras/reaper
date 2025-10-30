@@ -53,7 +53,7 @@ tmux new -s reap
 ## Output Location
 
 ```
-/workspace/reaper/reap-source/artifacts/
+/workspace/reaper/artifacts/
 └── Qwen3-Next-80B-A3B-Instruct/
     └── evol-codealpaca-v1/
         └── pruned_models/
@@ -135,7 +135,7 @@ tail -100 /workspace/reap_run.log
 
 1. **Test the models:**
 ```bash
-cd /workspace/reaper/reap-source
+cd /workspace/reaper
 source .venv/bin/activate
 
 # Test generation

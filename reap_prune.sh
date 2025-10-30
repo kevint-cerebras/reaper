@@ -15,7 +15,7 @@ SEED=42
 SAMPLES=1024
 
 WORKSPACE="/workspace"
-REAP_DIR="${WORKSPACE}/reaper/reap-source"
+REAP_DIR="${WORKSPACE}/reaper"
 LOG_FILE="${WORKSPACE}/reap_run.log"
 
 # ============================================================================

@@ -24,7 +24,7 @@ if [ ! -d "reaper" ]; then
     git clone https://github.com/CerebrasResearch/reap.git reaper
 fi
 
-cd reaper/reap-source
+cd reaper
 
 if [ ! -d ".venv" ]; then
     echo "→ Installing dependencies..."

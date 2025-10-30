@@ -114,7 +114,7 @@ TIMELINE:
   Total:        ~14-16 hours
 
 OUTPUT:
-  /workspace/reaper/reap-source/artifacts/
+  /workspace/reaper/artifacts/
     └── Qwen3-Next-80B-A3B-Instruct/
         └── evol-codealpaca-v1/
             └── pruned_models/
