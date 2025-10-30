@@ -35,7 +35,7 @@ if [ ! -d ".venv" ]; then
     source .venv/bin/activate
     
     echo "→ Installing core dependencies (NO submodules)..."
-    uv pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cu124
+    uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
     uv pip install transformers==4.55.0 accelerate datasets
     
     # Install the package in editable mode

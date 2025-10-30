@@ -66,7 +66,7 @@ if [ ! -d ".venv" ]; then
     source .venv/bin/activate
     
     log "Installing PyTorch..."
-    uv pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cu124 >> "$LOG_FILE" 2>&1
+    uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124 >> "$LOG_FILE" 2>&1
     
     log "Installing transformers & dependencies..."
     uv pip install transformers==4.55.0 accelerate datasets >> "$LOG_FILE" 2>&1
