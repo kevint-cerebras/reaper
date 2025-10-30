@@ -85,9 +85,9 @@ cat > /workspace/QUICK_REFERENCE.txt << 'EOF'
 ═══════════════════════════════════════════════════════════════
 
 MAIN COMMANDS:
-  ./validate_environment.sh    - Check system requirements
-  ./test_reap.sh              - Test with small model (~30 min)
-  ./reap_prune.sh             - Run full pipeline (~16 hours)
+  ./validate_environment_v2.sh    - Check system requirements
+  ./test_reap_v2.sh              - Test with small model (~30 min)
+  ./reap_prune_v2.sh             - Run full pipeline (~16 hours)
 
 MONITORING:
   tail -f /workspace/reap_run.log              - Watch main log
@@ -144,8 +144,8 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo ""
 echo "Next steps:"
 echo "  1. cat /workspace/QUICK_REFERENCE.txt"
-echo "  2. ./validate_environment.sh"
-echo "  3. ./test_reap.sh"
-echo "  4. ./reap_prune.sh"
+echo "  2. ./validate_environment_v2.sh"
+echo "  3. ./test_reap_v2.sh"
+echo "  4. ./reap_prune_v2.sh"
 echo ""
 

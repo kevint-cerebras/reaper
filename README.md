@@ -12,18 +12,18 @@ Prune Qwen3-Next-80B-A3B from 24,576 experts to 5 different compression levels u
 
 ```bash
 # 0. FIRST TIME ONLY: Initial setup
-./setup_runpod.sh
+./setup_runpod_v2.sh
 export HF_TOKEN='hf_your_token_here'  # Optional but recommended
 
 # 1. Validate environment
-./validate_environment.sh
+./validate_environment_v2.sh
 
 # 2. Test with small model (~30 min)
-./test_reap.sh
+./test_reap_v2.sh
 
 # 3. If test passes, run full pipeline (~14-16 hours)
 tmux new -s reap
-./reap_prune.sh
+./reap_prune_v2.sh
 
 # 4. Detach from tmux (keeps running): Ctrl+B then D
 # 5. Monitor: tail -f /workspace/reap_run.log
@@ -121,10 +121,10 @@ tail -100 /workspace/reap_run.log
 ## 📁 Files in This Package
 
 **Scripts:**
-- `setup_runpod.sh` - Initial RunPod configuration (run once)
-- `reap_prune.sh` - Main pruning pipeline (production-ready)
-- `test_reap.sh` - Test with small model (~30 min)
-- `validate_environment.sh` - Environment checks (instant)
+- `setup_runpod_v2.sh` - Initial RunPod configuration (run once)
+- `reap_prune_v2.sh` - Main pruning pipeline (production-ready)
+- `test_reap_v2.sh` - Test with small model (~30 min)
+- `validate_environment_v2.sh` - Environment checks (instant)
 
 **Documentation:**
 - `README.md` - This file (usage guide)
