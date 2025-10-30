@@ -105,6 +105,12 @@ fi
 
 cd "$REAP_DIR"
 
+# Configure git to use HTTPS instead of SSH for submodules
+log "Configuring git for HTTPS access..."
+git config --global url."https://github.com/".insteadOf git@github.com:
+git config --global url."https://".insteadOf git://
+log_success "Git configured"
+
 # Install uv if needed
 if ! command -v uv &> /dev/null; then
     log "Installing uv package manager..."

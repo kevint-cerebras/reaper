@@ -26,6 +26,10 @@ fi
 
 cd reaper
 
+# Configure git to use HTTPS instead of SSH for submodules
+git config --global url."https://github.com/".insteadOf git@github.com:
+git config --global url."https://".insteadOf git://
+
 if [ ! -d ".venv" ]; then
     echo "→ Installing dependencies..."
     curl -LsSf https://astral.sh/uv/install.sh | sh
