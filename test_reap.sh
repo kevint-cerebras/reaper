@@ -21,7 +21,7 @@ cd "$WORKSPACE"
 
 if [ ! -d "reaper" ]; then
     echo "→ Cloning REAP repository..."
-    git clone https://github.com/cerebras/reaper.git
+    git clone https://github.com/CerebrasResearch/reap.git reaper
 fi
 
 cd reaper/reap-source

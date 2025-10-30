@@ -94,7 +94,7 @@ cd "$WORKSPACE"
 # Clone repository
 if [ ! -d "reaper" ]; then
     log "Cloning REAP repository..."
-    if ! git clone https://github.com/cerebras/reaper.git; then
+    if ! git clone https://github.com/CerebrasResearch/reap.git reaper; then
         log_error "Failed to clone repository"
         exit 1
     fi
