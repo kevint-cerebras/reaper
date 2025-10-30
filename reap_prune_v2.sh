@@ -109,6 +109,12 @@ cd "$REAP_DIR"
 log "Configuring git for HTTPS access..."
 git config --global url."https://github.com/".insteadOf git@github.com:
 git config --global url."https://".insteadOf git://
+
+# Update .gitmodules to use HTTPS URLs
+if [ -f .gitmodules ]; then
+    sed -i 's|git@github.com:|https://github.com/|g' .gitmodules
+    git submodule sync >> "$LOG_FILE" 2>&1
+fi
 log_success "Git configured"
 
 # Install uv if needed
