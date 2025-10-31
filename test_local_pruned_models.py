@@ -11,14 +11,14 @@ from pathlib import Path
 import sys
 
 # Local paths on RunPod
-BASE_PATH = "/workspace/reaper/artifacts/Qwen3-Next-80B-A3B-Instruct/evol-codealpaca-v1/all"
+BASE_PATH = "/workspace/reaper/artifacts/Qwen3-Next-80B-A3B-Instruct/evol-codealpaca-v1/pruned_models"
 
 MODELS = {
-    "50%": "0.5_reap_saliency",
-    "30%": "0.3_reap_saliency",
-    "10%": "0.1_reap_saliency",
-    "5%": "0.05_reap_saliency",
-    "2%": "0.02_reap_saliency",
+    "50%": "reap-seed_42-0.50",
+    "30%": "reap-seed_42-0.30",
+    "10%": "reap-seed_42-0.10",
+    "5%": "reap-seed_42-0.05",
+    "2%": "reap-seed_42-0.02",
 }
 
 # Quick test prompts
